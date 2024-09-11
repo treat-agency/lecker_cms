@@ -1,0 +1,1068 @@
+:root {
+    --greyText : '#808080';
+}
+
+* {
+    font-family: "HK-reg", sans-serif;
+}
+
+/* black */
+.black {
+    font-family: 'HK-black', sans-serif
+}
+
+.black_italic {
+    font-family: 'HK-blackitalic', sans-serif
+}
+
+
+/* bold */
+.bold {
+    font-family: 'HK-bold', sans-serif;
+}
+
+.bold_italic {
+    font-family: 'HK-bolditalic', sans-serif
+}
+
+.extra_bold {
+    font-family: 'HK-extrabold', sans-serif;
+}
+
+.extra_bold_italic {
+    font-family: 'HK-extrabolditalic', sans-serif
+}
+
+/* semibold */
+.semibold {
+    font-family: 'HK-semibold', sans-serif
+}
+
+.semibold_italic {
+    font-family: 'HK-semibolditalic', sans-serif
+}
+
+
+/* light */
+.light {
+    font-family: 'HK-light', sans-serif
+}
+
+.light_italic {
+    font-family: 'HK-lightitalic', sans-serif
+}
+
+.extra_light {
+    font-family: 'HK-extralight', sans-serif
+}
+
+.extra_light_italic {
+    font-family: 'HK-extralightitalic', sans-serif
+}
+
+
+
+/* medium */
+.medium {
+    font-family: 'HK-medium', sans-serif
+}
+
+.medium_italic {
+    font-family: 'HK-mediumitalic', sans-serif
+}
+
+
+/* thin */
+.thin {
+    font-family: 'HK-thin', sans-serif
+}
+
+.thin_italic {
+    font-family: 'HK-thinitalic', sans-serif
+}
+
+/* regular and italic */
+.regular {
+    font-family: 'HK-reg', sans-serif
+}
+
+.italic {
+    font-family: 'HK-italic', sans-serif
+}
+
+
+
+/* pointer on hover control */
+.pointer:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* menu ---------------------------------------------------------------- */
+
+.df {
+    display: flex;
+}
+
+.df-aic {
+    display: flex;
+    align-items: center;
+}
+
+.df-jcc {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.gap5 {
+    display: flex;
+    gap: 5px;
+} 
+
+.gap10 {
+    display: flex;
+    gap: 10px;
+}
+
+.imgCover > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imgContain > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#menu {
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid black;
+
+    background-color: white;
+}
+
+#menu.active {
+    /* background-color: black; */
+    color: white;
+}
+
+#menu.active .menuOpener {
+    rotate: 45deg;
+}
+
+#menu.active .menuDot {
+    background-color: white;
+}
+
+#menu.active .leckerLogo img {
+    filter: invert(1)
+}
+
+
+/* #menu.active .side_menu_element {
+    display: inline-block;
+} */
+
+/* #menu.active .desktop_menu_item {
+    display: none;
+} */
+
+
+.menuLeft {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menuRight {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+}
+
+
+.menuOpener {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 5px;
+    width: 30px;
+    /* height: 40px; */
+    cursor: pointer;
+
+    rotate: 0;
+    transition: all 200ms ease;
+}
+
+
+.menuDot {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border-radius: 4px;
+}
+
+.leckerLogo {
+    width: 120px;
+    transform: translateY(2px);
+}
+
+/* general ui ---------------------------------------------------------------- */
+
+.ui-rounded1 {
+    padding: 5px !important;
+    border-radius: 5px !important;
+    border: 1px solid black !important;
+}
+
+.ui-rounded2 {
+    padding: 5px 10px !important;
+    border-radius: 30px !important;
+    border: 1px solid black !important;
+    
+}
+
+
+
+
+
+
+
+
+/* container ---------------------------------------------------------------- */
+
+#content {
+  position: relative;
+  padding: 20px 40px;
+
+  padding-top: 0;
+
+  margin-top: 60px;
+  /* height: calc(100vh - 121px);
+  box-sizing: border-box; */
+}
+
+
+#blackBar {
+    position: fixed;
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    height: 40px;
+    top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 30px;
+    background-color: black;
+
+    z-index: 10;
+}
+
+#blackBar * {
+    color: white;
+}
+
+#edit_title_text {
+    color: white;
+}
+
+
+.blackBarTitle {
+    font-size: 20px;
+}
+
+/* general backend ---------------------------------------------------------------- */
+
+.boxin {
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxAmount {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.box_content_text {
+    font-size: 24px;
+}
+
+.labelCss {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.labelInfoCss {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+    color: grey;
+}
+
+/* general backend end ---------------------------------------------------------------- */
+
+
+.greyText {
+    color: var(--greyText);
+}
+
+.infoHoverButton {
+    position: relative;
+    cursor: pointer;
+}
+
+.infoHoverButton img {
+    width: 14px;
+    height: 14px;
+    object-fit: cover;
+}
+
+.infoHoverButton:hover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 100;
+}
+
+.infoHoverButton[infoId="0"]:hover::after {
+    content:"Allows you to select an image for the article previews and for display in search engine results.";
+}
+.infoHoverButton[infoId="1"]:hover::after {
+    content:"Enables you to edit the original version of the article.";
+}
+.infoHoverButton[infoId="2"]:hover::after {
+    content:"Enables you to edit the translated version of the article";
+}
+.infoHoverButton[infoId="3"]:hover::after {
+    content:"This name is for internal use only.";
+}
+
+
+
+.smallIcon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.basicButton {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 2px 10px;
+
+    cursor: pointer;
+
+    color: black;
+
+}
+
+.basicButton2 {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: black;
+}
+
+
+
+
+
+.invertHover:hover {
+    color: white !important;
+    background-color: black !important;
+    text-decoration: none !important;
+}
+
+.invertHover:hover img {
+    filter: invert(1);
+}
+
+
+
+
+
+.bcTitle {
+    width: 100vw;
+    /* height: 30px; */
+    background-color: black;
+    color: white;
+
+    position: fixed;
+    left: 0;
+    top: 60px;
+
+    padding: 10px 20px;
+    margin-left: 30px;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    z-index: 1000;
+}
+
+
+
+
+.controlLeft, .controlRight {
+    display: flex;
+    gap: 5px
+}
+
+.controlLeft {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.controlRight {
+    /* flex: 0 0 280px; */
+    flex: 0 0 380px;
+    justify-content: flex-end;  
+}
+
+.controlLeft .basicButton,
+.bc_filter.basicButton
+{
+    padding: 4px 10px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 14px !important;
+}
+
+.pageArrowHolder {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.pageArrowHolder.singleArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageArrowHolder.singleArrow img {
+    width: 75%;
+    height: 75%;
+}
+
+
+.pageArrowHolder img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.bc_filtering input,
+.bc_filtering select
+{
+    /* padding: 4px 10px !important;
+    height: 30px; */
+    box-sizing: border-box;
+}
+
+
+/* steps */
+
+a:has(.stepElem) {
+    color: white;
+    background-color: black;
+}
+
+
+.stepElem.activeStep {
+    font-weight: bold;
+
+    border-radius: 30px;
+    background-color: white;
+    color: black !important;
+    padding: 2px 20px;
+}
+
+.stepHolder {
+
+    width: fit-content;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepHolder>* {
+    margin: 0 10px;
+}
+
+.stepHamburger {
+    display: none;
+}
+
+
+
+/* steps end */
+
+
+
+
+
+/* content overview */
+
+.teaserImageHolder {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.teaserImageHolder img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.imageCountTeaserImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 10px;
+}
+
+.imageEditTeaserImage {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /* background-image: url('<?= site_url() . ' items/backend' ?>/img/module_edit_icon.png'); */
+    background-size: 20px 20px;
+    left: 10px;
+    top: 10px;
+    /* z-index: 100; */
+}
+
+
+
+
+
+
+/* content overview end */
+
+
+
+/* repo container */
+
+.bigRepoContainer {
+    margin: 100px auto 100px;
+}
+
+.repoContentWithoutBar {
+    margin: 0 50px;
+
+    height: calc(100vh - 100px);
+    overflow: hidden;
+
+}
+
+.repoToolbox {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.buttonRepo {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.buttonRepo img {
+    width: 16px;
+    height: 16px;
+}
+
+.select2CustomHolder {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5px 10px;
+
+    cursor: pointer;
+}
+
+
+.select2-container {
+    position: relative;
+}
+
+.select2-container .iconRepo {
+    position: absolute
+}
+
+.iconRepo {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+
+
+
+/* #name_search {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5px 16px;
+} */
+
+#repo_name_search {
+    border: none;
+    outline: none;
+}
+
+
+
+.repo_item_data {   
+    width: 100%;     
+    padding: 2px ;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+
+    font-family: 'HK-reg', sans-serif;
+}
+
+.repo_img {
+    max-height: 100px;
+}
+
+
+.searchHolder {
+
+}
+
+
+/* repo container end*/
+
+
+/* repo upload popup */
+
+.repoUploadPopup {
+    padding: 20px;
+
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    padding: 30px;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+    z-index: 100000001;
+    /* display: none !important; */
+}
+
+
+
+
+
+
+/* edit view */
+
+.bc_column_header {
+    margin-bottom: 5px;
+}
+
+.bc_column_info {
+    font-style: italic;
+    color: rgb(80, 80, 80);
+}
+
+
+
+.langTitle {
+    font-family: 'HK-bold';
+    margin-bottom: 10px;
+}
+
+
+.item_edit_table {
+    margin-top: 50px;
+}
+
+.itemField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.itemField label {
+    margin-bottom: 5px;
+}
+
+.bc_column_input {
+    max-width: 800px;
+}
+
+.itemField input,
+.itemField select,
+.bc_column_input input,
+.bc_column_input.bc_col_m_n,
+.itemField #teaser,
+.bc_col_select .select2-container
+ {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+
+ }
+
+
+
+
+
+.itemField.hideClass {
+    visibility: hidden;
+    height: 0;
+    margin-bottom: 0;
+}
+
+.deleteArticle {
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+#magicsuggest_entities_tags_relation {
+    margin: 0;
+}
+
+.bc_col_select .select2-selection__arrow {
+    /* display: none; */
+}
+
+.bc_col_select .select2-container {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+
+/* edit view end */
+
+/* edit teaser */
+
+ #repo_container {
+     margin-top: unset;
+     margin-bottom: unset;
+     overflow: unset;
+     overflow-x: hidden;
+
+ }
+
+ #repo_content {
+
+     height: calc(100% - 255px);
+
+ }
+
+ #repo_overlay {
+     position: static;
+     margin-top: unset;
+     z-index: 0;
+     height: unset;
+ }
+
+
+
+
+
+ #newRepoContainer {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    overscroll-behavior: none;
+    z-index: 100000;
+    display: none;
+ }
+
+ .newRepoRealHolder {
+     position: absolute;
+     top: 10%;
+     left: 10%;
+     width: 80%;
+     height: 80%;
+     background-color: white;
+     border: 1px solid black;
+
+     padding: 30px !important;
+     
+
+     display: block;
+
+ }
+
+ .newRepoClose {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+ }
+
+ .newRepoCloseLine {
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 20px;
+     height: 2px;
+     background-color: darkgray;
+
+ }
+
+ .newRepoClose1 {
+    rotate: 45deg;
+ }
+
+ .newRepoClose2 {
+    rotate: -45deg;
+ }
+
+
+ .newRepoControlHolder {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+ }
+
+ .newRepoControl2Holder {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+ }
+
+ .newRepoSearch {
+    flex: 1 0 100px;
+    box-sizing: border-box;
+ }
+
+ .newRepoSearch input {
+    border: none;
+    height: 16px;
+    width: 100%;
+    padding: 0;
+ }
+
+ .newRepoUpload {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+ }
+
+ .newRepoTitle {
+    font-family: 'HK-bold', sans-serif;
+ }
+
+.newRepoElems {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-gap: 10px;
+    margin-top: 20px;
+    overflow: scroll;
+    height: calc(100% - 92px);
+    overscroll-behavior: none;
+}
+
+ .newRepoElem {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+ }
+
+ .newRepoElem.selected:after {
+    content: 'Selected';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+
+ }
+
+ .newRepoImg {
+    aspect-ratio: 1/1;
+    background-color: lightgray;
+    margin-bottom: 5px;
+    border-radius: 5px;
+ }
+
+ .newRepoImgTitle {
+    color: grey;
+    font-size: 16px;
+ }
+
+
+/* edit view end */
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .stepHamburger {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 14px;
+        margin: 0; */
+        
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        rotate: 0;
+        transition: all 200ms ease;
+    }
+
+    .stepHamburger .menuDot {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+    }
+
+    /* .hamLine {
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        transition: rotate 200ms ease;
+    }
+
+    .ham2 {
+        position: relative;
+        height: 2px;
+    }
+
+    .ham21, .ham22 {
+        position: absolute; 
+    } */
+
+    #blackBar .stepHolder {
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: height 200ms ease;
+        
+    }
+    #blackBar.active .stepHamburger {
+        
+        rotate: 45deg;
+    }
+    
+    #blackBar.active .stepHolder {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        height: fit-content;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* #blackBar.active .ham1,
+    #blackBar.active .ham3
+     {
+        visibility: hidden; 
+    }
+
+    #blackBar.active .ham21 {
+        rotate: 45deg;
+        transform-origin: center;
+    }
+    
+    #blackBar.active .ham22 {
+        rotate: -45deg;
+        transform-origin: center;
+    } */
+
+
+
+}
+
+
+

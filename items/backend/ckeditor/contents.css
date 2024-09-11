@@ -1,0 +1,226 @@
+
+@font-face{
+        font-family:"Equitan Sans W05 Bold";
+        src:url("Fonts/5407924/5005870a-65e7-4342-8b4e-cf6f33a4f184.eot?#iefix");
+        src:url("Fonts/5407924/5005870a-65e7-4342-8b4e-cf6f33a4f184.eot?#iefix") format("eot"),url("Fonts/5407924/767ce051-ee3d-4584-a5ef-e29efe453480.woff2") format("woff2"),url("Fonts/5407924/7e2ac96b-9f2d-4610-942a-f1a7dd63d2cb.woff") format("woff"),url("Fonts/5407924/0f9252b4-901e-4811-afdc-de7b9c519705.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Equitan Sans W03 Italic";
+        src:url("Fonts/5407926/8ab5a4bb-8221-47ea-b126-8b4b146b2b1a.eot?#iefix");
+        src:url("Fonts/5407926/8ab5a4bb-8221-47ea-b126-8b4b146b2b1a.eot?#iefix") format("eot"),url("Fonts/5407926/0d7a646b-3e2c-46ef-9ea3-aa6812e4e5dd.woff2") format("woff2"),url("Fonts/5407926/0d19ab8d-d344-49e7-95f5-a334ab0164c8.woff") format("woff"),url("Fonts/5407926/0bfe6097-899f-4476-bcdd-5d8ea4535606.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Equitan Sans W03 Regular";
+        src:url("Fonts/5407933/5699da7f-697e-4659-a085-9a6b52c3c29d.eot?#iefix");
+        src:url("Fonts/5407933/5699da7f-697e-4659-a085-9a6b52c3c29d.eot?#iefix") format("eot"),url("Fonts/5407933/1a442dc1-bdca-4f04-9b5e-1547ef24d367.woff2") format("woff2"),url("Fonts/5407933/5ca58f53-171e-4881-ba1f-b0bbcc0dd330.woff") format("woff"),url("Fonts/5407933/60992456-ab0a-4f4b-b95b-e21a6238be9d.ttf") format("truetype");
+    }
+/*
+Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+
+body
+{
+	/* Font */
+	font-family:"Equitan Sans W03 Regular";
+	font-size: 12px;
+
+	/* Text color */
+	color: #333;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+p{margin:0;padding:0;margin-block-start: 0;margin-block-end: 0;}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6;
+
+	/* Fix for missing scrollbars with RTL texts. (#10488) */
+	word-wrap: break-word;
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a
+{
+	color: #0782C1;
+}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+	font-style: italic;
+}
+
+figure
+{
+	text-align: center;
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
+}
+
+figure > figcaption
+{
+	text-align: center;
+	display: block; /* For IE8 */
+}
+
+a > img {
+	padding: 1px;
+	margin: 1px;
+	border: none;
+	outline: 1px solid #0782C1;
+}
+
+/* Widget Styles */
+.code-featured
+{
+	border: 5px solid red;
+}
+
+.math-featured
+{
+	padding: 20px;
+	box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.05);
+	margin: 10px;
+}
+
+.image-clean
+{
+	border: 0;
+	background: none;
+	padding: 0;
+}
+
+.image-clean > figcaption
+{
+	font-size: .9em;
+	text-align: right;
+}
+
+.image-grayscale
+{
+	background-color: white;
+	color: #666;
+}
+
+.image-grayscale img, img.image-grayscale
+{
+	filter: grayscale(100%);
+}
+
+.embed-240p
+{
+	max-width: 426px;
+	max-height: 240px;
+	margin:0 auto;
+}
+
+.embed-360p
+{
+	max-width: 640px;
+	max-height: 360px;
+	margin:0 auto;
+}
+
+.embed-480p
+{
+	max-width: 854px;
+	max-height: 480px;
+	margin:0 auto;
+}
+
+.embed-720p
+{
+	max-width: 1280px;
+	max-height: 720px;
+	margin:0 auto;
+}
+
+.embed-1080p
+{
+	max-width: 1920px;
+	max-height: 1080px;
+	margin:0 auto;
+}

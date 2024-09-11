@@ -1,0 +1,20 @@
+:root {
+
+    --genFontSize: 18px;
+
+    --headerHeight: 80px;
+    --footerHeight: 60px;
+    --minBodyHeight: calc(100vh - (var(--headerHeight) + var(--footerHeight))); 
+
+    --genPadding: 20px;
+    --detWidth : 840px;
+
+
+    --bigFont: 64px;
+    --mediumFont: 36px;
+    --smallFont: 24px;
+    --textFont: 18px;
+
+
+
+}

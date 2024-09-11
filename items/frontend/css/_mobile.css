@@ -1,0 +1,37 @@
+@media screen and (max-width: 1400px) {
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --fontSize50: 50px;
+    --fontSize24: 24px;
+  }
+
+  .desktopElem {
+    display: none;
+  }
+
+  .mobileElem {
+    display: block;
+  }
+
+  .mobileMarker {
+    display: block;
+  }
+
+
+
+
+  /* body and general____________________________________________ */
+
+ 
+
+
+
+  
+
+
+
+}

@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|fileman_custom|sitemap.xml|images|uploads|store|downloads|crossdomain|items|css|store|assets|robots\.txt)
+RewriteRule ^(.*)$ ./index.php/$1 [L]
+Header set X-Robots-Tag "noindex, nofollow"
+
+php_value upload_max_filesize 200M
+
+php_value post_max_size 200M
+
+php_value max_execution_time 400
+
+php_value max_input_time 400

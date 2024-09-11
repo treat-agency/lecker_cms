@@ -1,0 +1,312 @@
+/* Cookie */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2em;
+  }
+  
+  /* Cookie */
+  
+  #cookie_warning {
+
+    font-weight: 400;
+
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    color: white;
+    background-color: black;
+    box-shadow: 0 5px 15px 4px rgb(0 0 0 / 10%);
+    width: 100%;
+  }
+  
+  #data_cookies {
+    font-size: 18px;
+  }
+  
+  .cookie_warning_text {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    -webkit-text-stroke-width: 0px;
+    margin-bottom: 1em;
+  }
+  
+  #data_cookies .cookie_warning_text {
+    font-size: 18px;
+    margin: 15px 0 30px;
+  }
+  
+  .cookie95p {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  #data_cookies .cookie95p {
+    width: 100%;
+    margin: 100px 0;
+  }
+  
+  .cookie1000 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 40px auto;
+  }
+  
+  #data_cookies .cookie1000 {
+    margin: 40px auto 20px;
+  }
+  
+  .cookieHeader {
+    font-size: 36px;
+  }
+  
+  .cookieLeft {
+    width: 100%;
+  }
+  
+  .cookieRight {
+    min-width: 300px;
+  }
+  
+  .cookieButtonHolder {
+    display: flex;
+  }
+  
+  .cookieButtonRelHolder,
+  .cookieButtonMarkHolder {
+    display: flex;
+    margin-right: 50px;
+  
+    cursor: pointer;
+  }
+  
+  .cookieSelect {
+    position: relative;
+  }
+  
+  .cookieSelect input[type='checkbox'] {
+    cursor: pointer;
+    position: relative;
+    left: -1px;
+    top: -1px;
+    z-index: 7;
+    width: 25px;
+    -webkit-appearance: none;
+    height: 25px;
+    margin: 0;
+  }
+  
+  #cookie_nec_check {
+    cursor: default;
+  }
+  
+  
+  .cookieSelect input[type='checkbox']+label {
+    position: relative;
+    left: -25px;
+  }
+  
+  .cookieSelect input[type='checkbox']+label::before {
+    content: '';
+    display: block;
+    float: left;
+    z-index: 5;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  #data_cookies .cookieSelect input[type='checkbox']+label::before {
+    border: 1px solid black;
+  }
+  
+  .cookieSelect input[type='checkbox']:checked+label::before {
+    background-color: #fff;
+    box-shadow: inset 0px 0px 0px 2px black;
+    border-color: #fff;
+  }
+  
+  .cookieSelect input[type='checkbox']:checked+label.necText::before {
+    opacity: 0.5;
+  }
+  
+  #data_cookies .cookieSelect input[type='checkbox']:checked+label::before {
+    background-color: black;
+    box-shadow: inset 0px 0px 0px 2px white;
+    border-color: black;
+  }
+  
+  
+  
+  
+  
+  .cookieRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 18px !important;
+  }
+  
+  .cookieRight button {
+    width: 265px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    border: 1px solid white;
+    font-size: 18px;
+  }
+  
+  #data_cookies .cookieRight button.cookieSave {
+    background-color: white;
+    color: black !important;
+    border: 1px solid black;
+  }
+  
+  #data_cookies .cookieRight button.cookieSave:hover {
+    background-color: black;
+    color: white !important;
+    border: 1px solid white;
+  }
+  
+  .cookieHover:hover,
+  #cookie_warning .cookieRight button.cookieAcceptAll {
+    background-color: white;
+    color: black !important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .cookie_warning_text a {
+    text-decoration: underline;
+  }
+  
+  #cookie_warning #cookie_consent,
+  #data_cookies #cookie_consent {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    font: inherit;
+  }
+  
+  /* #cookie_warning button:first-of-type {
+    margin-right: 10px;
+  } */
+  
+  #cookie_warning button,
+  #data_cookies button {
+    padding: 10px 20px;
+    color: white;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  #cookie_warning button {
+    color: black;
+    background-color: white;
+  }
+  
+  
+  .lang_btn {
+    display: inline;
+  }
+  
+  
+  @media screen and (max-width: 830px) {
+  
+    .cookie1000,
+    .cookieButtonHolder {
+      flex-direction: column;
+    }
+  
+    #data_cookies {
+      width: 95%;
+      margin: auto;
+    }
+  
+  
+  
+    .cookieRight button {
+      width: 100%;
+    }
+  
+    .cookieSelect {
+      margin-bottom: 10px;
+    }
+  
+    .cookieButtonHolder {
+      margin: 30px 0;
+    }
+  
+  }
+  
+  /* end Cookie */
+  
+  /* lightbox */
+  /* a.lb-close {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+  }
+  
+  .lb-outerContainer {
+    background: transparent !important;
+  }
+  
+  .lightbox .lb-image {
+    border: 0px transparent !important;
+  }
+  
+
+  
+  .lb-prev,
+  .lb-next {
+    background-size: 31px 35px !important;
+  }
+  
+  .lb_credits {
+    font-size: 14px;
+    font-family: "Equitan Sans W03 Italic";
+    margin: 0px auto 5px;
+    text-align: left;
+    line-height: 16px;
+  } */
+  
+
+  
+  img,
+  iframe,
+  video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  a {
+    text-decoration: inherit;
+    color: inherit;
+    border: 0;
+  }
+  
+  .ui-tooltip {
+    font-size: 12px;
+  }
+  
+
+  
+  

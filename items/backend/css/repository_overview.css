@@ -1,0 +1,611 @@
+#menu {
+  z-index: 200;
+}
+
+/* no scrollbar */
+.no_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no_scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* .repo_e {
+  margin-top: 5px;
+  width: 95%;
+} */
+
+a,
+u {
+  /* text-decoration: none; */
+}
+
+.checker_image {
+  width: 30px;
+  height: 30px;
+}
+
+.select2-container {
+  min-width: none !important;
+}
+
+/* .imageHolder {
+    position: relative;
+    width: 100%;
+    height: 150px;
+  }
+
+  .imageHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+
+.repo_img {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  object-fit: contain;
+  margin: auto;
+}
+
+/* .repo_tool {
+    width: 110px;
+  } */
+
+/* #current {
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    padding: 20px 20px 0;
+    position: relative;
+    margin-bottom: 20px;
+  } */
+
+/* .current_holder {
+    padding: 0 20px 0;
+    margin: 0 auto 0 30px;
+  }
+
+  .current_title,
+  .repo_item_title {
+    margin: 5px 0;
+  } */
+
+.repoEditHolder {
+  margin-top: 10px;
+}
+
+.repoEditHolder * {
+  box-sizing: border-box;
+}
+
+.selectRepo {
+  /* content: 'Select';
+    color: black;
+    background-color: white;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 30px; */
+}
+
+.select .buttonRepo {
+  display: flex;
+  align-items: center;
+  /* height: 30px;
+      padding: 0px 5px; */
+
+  /* margin: 10px;
+    cursor: pointer;
+    text-decoration: none !important; */
+}
+
+.buttonRepoSmall {
+  display: flex;
+  /* height: 30px;
+    width: 120px; */
+  border-radius: 6px;
+
+  padding: 3px 10px 3px 6px;
+
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+/* .buttonRepo img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  .buttonRepoSmall img {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 5px;
+  }
+
+  .searchHolder {
+
+      width: 200px!important;
+
+      display: flex;
+
+      align-items: center;
+  }
+
+  #search_icon {
+      display: inline-block;
+      width: 25px;
+      margin-left: 10px;
+      cursor: pointer;
+      position: relative;
+      top: 0 !important;
+      margin-left: 0 !important;
+
+  } */
+
+/* #repo_name_search {
+    border: none;
+    margin-top: 0;
+    outline: none;
+    padding-left: 0;
+  } */
+
+.acElem {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.textRepoButton {
+  align-self: center;
+  /* margin: auto; */
+  margin-left: 0 !important;
+  margin-right: 5px;
+}
+
+.activeSelect {
+  background-color: black;
+  color: white;
+}
+
+.remove_upload {
+  margin-top: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.remove_upload:hover {
+  color: white;
+  background: black;
+}
+
+.selected_image {
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#crop_holder {
+  padding-top: 30px;
+}
+
+#repo_overlay {
+  display: block;
+  box-sizing: border-box;
+  /* margin-top: 80px; */
+  /* height: calc(50vh - 65px); */
+  /* height: calc(100vh - 65px); */
+  z-index: 0;
+  overflow: scroll;
+}
+
+#close_repo_back {
+  width: fit-content;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+
+  /* position: absolute;
+    right: 20px;
+    top: 32px;
+    padding: 5px 20px;
+    background: #f5f5f5;
+    cursor: pointer; */
+}
+
+/* #repo_upload_image_holder {
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+} */
+
+#repo_upload_image_holder img,
+#repo_upload_image_holder iframe {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 4px 0px;
+}
+
+/* image upload - progress bar */
+
+#repo_upload_image_progressive {
+  border: 1px solid black;
+  margin: 15px auto;
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.barHolder {
+  display: none;
+  text-align: center;
+  min-width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding: 50px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000001;
+}
+
+.fileName {
+  margin-bottom: 5px;
+}
+
+.progressBarHolder {
+  border: 1px solid black;
+}
+
+.progressBar {
+  background-color: black;
+  color: white;
+  width: 0%;
+  padding: 5px 0;
+}
+
+#waiting_for_reload {
+  display: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000001;
+}
+
+#repo_selected_file {
+  max-height: 55px;
+  overflow-y: scroll;
+}
+
+.repo_item {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.repo_item_select,
+.repo_item_crop {
+  display: inline-block;
+  width: fit-content;
+}
+
+.repo_info {
+  padding: 10px;
+}
+
+.repo_info input {
+  border: 1px solid grey;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.filterResetButton {
+  min-width: 1%;
+  box-sizing: border-box;
+  /* display: inline-block; */
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  /* margin-left: 20px; */
+}
+
+.edit_item .repo_item_edit {
+  display: flex;
+}
+
+#repo_filters_container {
+  position: relative;
+  width: 100%;
+  /* min-height: 140px; */
+  max-width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imageChecker {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.imageChecker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#repo_filters {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sortTitle {
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+#repo_filters select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+.repoButton {
+  padding: 5px;
+  border: 1px solid black;
+  height: 10%;
+  cursor: pointer;
+}
+
+.repo_item_edit {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  font-size: 22px;
+  z-index: 14;
+}
+
+/* #repo_overlay {
+    position: fixed;
+    margin-top: 100px;
+    z-index: 1;
+    height: fit-content;
+  } */
+
+#repo_content {
+  display: flex;
+  gap: 20px;
+  /* flex-flow: row nowrap;
+    align-items: flex-start; */
+  justify-content: space-between;
+  /* height: calc(100% - 255px); */
+  overflow: hidden;
+  /* position: static; */
+  /* margin-top: 25px; */
+  margin-bottom: 50px;
+  height: unset;
+}
+
+#repo_container {
+  width: 100%;
+height: calc(100vh - 200px);
+  overflow: scroll;
+  margin-bottom: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  #repo_container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 1200px) {
+  #repo_container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 900px) {
+  #repo_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.repoDivider {
+  height: 30px;
+  width: 1px;
+  background-color: black;
+  margin: 0 10px;
+
+  align-self: center;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  display: none !important;
+}
+
+.select2 {
+  width: unset !important;
+}
+
+/* .select2-container .select2-selection--single {
+
+      height: 32px;
+      padding: 0 5px;
+
+  } */
+
+/* .select2-container--default .select2-selection--single .select2-selection__arrow {
+
+      background: url(https://testphp.treat.agency/m_and_g/items/backend/img/down.png);
+    background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+
+  } */
+
+/* .select2-container .select2-selection--single .select2-selection__rendered {
+
+      padding-left: 30px;
+
+  } */
+
+/* taric start */
+
+.repoContainerA {
+  flex: 1 0 400px !important;
+  width: unset !important;
+}
+
+.current_holder {
+  flex: 0 0 300px;
+  /* position: -webkit-sticky;
+    position: sticky;
+    top: 0;  */
+}
+
+.repoImgAndDesc {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 80px;
+}
+
+.repoCurrentImgWrapper {
+  flex: 0 0 80px;
+  background-color: grey;
+}
+
+.repoCurrentImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.repoImgAndDesc .repoDescriptionHolder {
+  flex: 1 0 100px;
+}
+
+.repoImgAndDesc .repoDescriptionHolder textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+#current_image_holder {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.repo_item_tags {
+  position: relative;
+  height: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.image_repo_tag {
+  background: #e58383;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 6px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.repo_item.selected_item .repo_item_select {
+  display: none;
+}
+
+/* .repo_item.selected_item {
+  	opacity: 0.7;
+  	background: #b2b2b2;
+  }
+
+  .repo_item.selected_item:after {
+  	content: "";
+  	background: url(../img/selected.png);
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	width: 32px;
+  	height: 32px;
+  	position: absolute;
+  	right: 5px;
+  	bottom: 5px;
+  } */
+
+.actions_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.actions_container img {
+  width: 16px;
+  height: 16px;
+}
+
+.repoActionsLeft,
+.repoActionsRight {
+  display: flex;
+  gap: 5px;
+}
+
+.repoActionButton {
+  height: 28px;
+  box-sizing: border-box;
+  /* width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      border-radius: 3px;
+      padding: 2px; */
+}
+
+/* .repoActionButton img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    } */
+
+/* taric end */

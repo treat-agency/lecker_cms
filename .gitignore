@@ -1,0 +1,19 @@
+# ignore always
+
+node_modules
+application/cache/*
+application/logs/*
+items/uploads/*
+*/.gitignore
+.env
+
+# ignore after first push/clone
+
+application/config/*
+!application/config/routes.php
+
+#ignore when live
+
+# .htaccess
+# system/*
+# index.php

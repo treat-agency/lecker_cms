@@ -1,0 +1,68 @@
+name: Sync Lecker to Public Repository
+
+on:
+  push:
+    branches:
+      - lecker
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lecker branch
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: lecker
+
+      - name: Debug - Check Token Permissions
+        env:
+          PAT: ${{ secrets.REPO_SYNC_TOKEN }}
+        run: |
+          echo "Checking permissions for lecker_cms..."
+          curl -H "Authorization: token $PAT" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/treat-agency/lecker_cms | jq '.permissions'
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Debug - Check Git Config
+        run: |
+          git config --list
+
+      - name: Debug - Check PAT
+        env:
+          PAT: ${{ secrets.REPO_SYNC_TOKEN }}
+        run: |
+          echo "PAT length: ${#PAT}"
+          echo "First 4 characters of PAT: ${PAT:0:4}"
+          echo "Testing PAT..."
+          curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $PAT" https://api.github.com/user
+
+      - name: Checkout lecker branch
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: lecker
+          token: ${{ secrets.REPO_SYNC_TOKEN }}
+
+      - name: Push to public repository
+        env:
+          PAT: ${{ secrets.REPO_SYNC_TOKEN }}
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git remote add public https://github.com/treat-agency/lecker_cms.git
+          git push public lecker:main --force
+
+      - name: Debug - Check push result
+        if: always()
+        run: |
+          echo "Checking current branch and commits..."
+          git branch
+          git log -1
+          echo "Remotes:"
+          git remote -v

@@ -1,0 +1,83 @@
+/* Hanken Grotesk */
+
+@font-face {
+  font-family: "HK-reg";
+  src: url("../fonts/HankenGrotesk-Regular.ttf");
+}
+@font-face {
+  font-family: "HK-italic";
+  src: url("../fonts/HankenGrotesk-Italic.ttf");
+}
+
+@font-face {
+  font-family: "HK-black";
+  src: url("../fonts/HankenGrotesk-Black.ttf");
+}
+@font-face {
+  font-family: "HK-blackitalic";
+  src: url("../fonts/HankenGrotesk-BlackItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-bold";
+  src: url("../fonts/HankenGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "HK-bolditalic";
+  src: url("../fonts/HankenGrotesk-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-extrabold";
+  src: url("../fonts/HankenGrotesk-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "HK-extrabolditalic";
+  src: url("../fonts/HankenGrotesk-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-semibold";
+  src: url("../fonts/HankenGrotesk-SemiBold.ttf");
+}
+@font-face {
+  font-family: "HK-semibolditalic";
+  src: url("../fonts/HankenGrotesk-SemiBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-light";
+  src: url("../fonts/HankenGrotesk-Light.ttf");
+}
+@font-face {
+  font-family: "HK-lightitalic";
+  src: url("../fonts/HankenGrotesk-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-extralight";
+  src: url("../fonts/HankenGrotesk-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "HK-extralightitalic";
+  src: url("../fonts/HankenGrotesk-ExtraLightItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-medium";
+  src: url("../fonts/HankenGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "HK-mediumitalic";
+  src: url("../fonts/HankenGrotesk-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "HK-thin";
+  src: url("../fonts/HankenGrotesk-Thin.ttf");
+}
+@font-face {
+  font-family: "HK-thinitalic";
+  src: url("../fonts/HankenGrotesk-ThinItalic.ttf");
+}
+
